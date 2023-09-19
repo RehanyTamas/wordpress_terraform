@@ -175,9 +175,9 @@ resource "tls_private_key" "priv_key" {
     engine               = "mysql"
     engine_version       = "8.0.32"
     instance_class       = var.instance_class
-    db_name              = "db"
-    username             = "admin"
-    password             = "admin_password"
+    db_name              = var.db_name
+    username             = var.db_user
+    password             = var.db_password
     skip_final_snapshot  = true
     vpc_security_group_ids = [aws_security_group.RDS_allow_rule.id]
     db_subnet_group_name = aws_db_subnet_group.db_subnet_group.id
@@ -236,9 +236,9 @@ resource "tls_private_key" "priv_key" {
   data "template_file" "user_data" {
     template = file("${path.module}/template/user_data.tpl")
     vars = {
-      db_username = "admin"
-      db_user_password = "admin_password"
-      db_name = "db"
+      db_username = var.db_user
+      db_user_password = var.db_password
+      db_name = var.db_name
       db_RDS = aws_db_instance.wordpress_db.endpoint
     }
   }

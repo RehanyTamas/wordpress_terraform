@@ -43,3 +43,20 @@ variable "root_volume_size" {
     type        = number
     default = 22
 }
+variable "db_name" {
+    description = "Name of the database"
+    type = string
+    default = "db"
+}
+
+variable "db_user" {
+    description = "User of the database"
+    type = string
+    default = "admin"
+}
+
+variable "db_password" {
+    description = "Password of the user of the database"
+    type = string
+    default = "admin_password"
+}
