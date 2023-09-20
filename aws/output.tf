@@ -1,4 +1,4 @@
-// Output IP and RDS Endpoint information
+  # Output IP and RDS Endpoint information
   output "IP" {
     value = aws_eip.eip.public_ip
   }

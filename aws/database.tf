@@ -1,4 +1,4 @@
-  // Create RDS instance
+  #  RDS instance
   resource "aws_db_instance" "wordpress_db" {
     allocated_storage    = 10
     engine               = "mysql"

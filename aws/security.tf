@@ -1,4 +1,4 @@
-  // Security group for EC2
+  # Security group for EC2
   resource "aws_security_group" "instance_sg" {
     name        = "wordpress-sg"
     description = "Security group for WordPress EC2 instance"
@@ -45,7 +45,7 @@
     }
   }
 
-  // Security group for RDS
+  # Security group for RDS
   resource "aws_security_group" "RDS_allow_rule" {
     vpc_id = aws_vpc.wordpress_vpc.id
     ingress {
@@ -66,7 +66,8 @@
     }
   }
 
-resource "tls_private_key" "priv_key" {
+  # Create Key Pair
+  resource "tls_private_key" "priv_key" {
     algorithm = "RSA"
     rsa_bits  = 4096
   }
