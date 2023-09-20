@@ -88,3 +88,4 @@ wp-config.php
 
 legacy/
 .terraform.lock.hcl
+priv_ids.tf
