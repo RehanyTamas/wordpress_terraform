@@ -49,4 +49,4 @@ Once all the resaources are created you can check it out on the ip address you c
 - After the terraform file finished you might need to wait a bit for the ec2 instance to finish fully setting up.
 
 ### TODO
--The azure version of this project is still under construction, and not as of yet functions.
+- The azure version of this project is still under construction, and not as of yet functions.
